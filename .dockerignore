@@ -1,0 +1,13 @@
+.git
+.idea
+.mypy_cache
+.venv
+
+nginx.conf
+docker-compose.yml
+.gitignore
+__pychache__
+pre-commit
+
+.flake8
+mypy.ini
