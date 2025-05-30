@@ -8,7 +8,7 @@ from api.services import OrganizationsService
 
 class OrganizationBalanceView(APIView):
     @staticmethod
-    def get(request, inn: str):
+    def get(request, inn: str) -> Response:
         balance = OrganizationsService.show_balance(inn)
         return Response(
             status=HTTPStatus.OK,

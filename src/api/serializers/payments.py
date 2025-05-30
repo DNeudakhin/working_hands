@@ -14,7 +14,7 @@ class PaymentsSerializer(serializers.Serializer):
     document_date = serializers.DateTimeField()
 
     @staticmethod
-    def validate_payer_inn(value):
+    def validate_payer_inn(value) -> str:
         if not re.match(r'^\d{10}$|^\d{12}$', value):
             raise serializers.ValidationError("INN must be 10 or 12 digits.")
         return value

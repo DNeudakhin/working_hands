@@ -13,7 +13,7 @@ loger = get_logger(__name__)
 
 class PaymentWebhookView(APIView):
     @staticmethod
-    def post(request):
+    def post(request) -> Response:
         try:
             loger.info('Start processing payment')
             created = PaymentsService.process_payment(request.data)

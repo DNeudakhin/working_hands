@@ -6,5 +6,5 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()]  # вывод в консоль
 )
 
-def get_logger(name):
+def get_logger(name: str) -> logging.Logger:
     return logging.getLogger(name)
